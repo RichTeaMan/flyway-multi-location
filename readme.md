@@ -41,12 +41,22 @@ mvn flyway:migrate -Dflyway.locations=db/migration/common
 
 ## Testing
 
+This project uses Spring Boot to host the H2 console. If this project were adapted to some other database, such as MySQL or Postgres, then another tool should be used.
+
 ```bash
 mvn spring-boot:run
 ```
 
 Navigate to http://localhost:5000/h2-console
 
-JDBC URL: `jdbc:h2:./data/demo`
-User Name: `sa`
-Password: `password`
+* JDBC URL: `jdbc:h2:./data/demo`
+* User Name: `sa`
+* Password: `password`
+
+Site A has person users prefixed with A. Site B is prefixed with B. Common will have no person rows at all.
+
+The database can be removed by deleting the data directory.
+
+```bash
+rm data/ -rf
+```
