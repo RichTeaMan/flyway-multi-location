@@ -1,4 +1,4 @@
-# Flyway Migration Demo
+# Flyway Multiple Location Demo
 
 A small project demonstrating Flyway migration into a H2 database with multiple reference data configurations.
 
